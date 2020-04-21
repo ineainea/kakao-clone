@@ -5,21 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex</title>
     <style>
+        html, body{
+            height: 100%;
+        }
         .father{
             display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+            /* row-reverse 역으로 출력 */
+            /* column-reverse 수직+역으로 출력 */
+            height: 100%;
+            flex-wrap: nowrap;
+           
         }
         .box{
             background-color: red;
             width: 200px;
             height: 200px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center; /* 숫자 가운데 정렬 */
+            align-items: center;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="father">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <!-- div.box{$}*10 -->
+       <div class="box">1</div>
+       <div class="box">2</div>
+       <div class="box">3</div>
+       <div class="box">4</div>
+       <div class="box">5</div>
+       <div class="box">6</div>
+       <div class="box">7</div>
+       <div class="box">8</div>
+       <div class="box">9</div>
+       <div class="box">10</div>
     </div>
 </body>
 </html>
+
+<!-- space-around는 컨텐츠뿐만 아니라 주변도 같은 간격으로 조정됨 -->
+<!-- flex-direction: row인 경우(default임) -->
+<!-- justify-content는 수평으로 적용 -->
+<!-- align-items은 수직으로 적용 -->
+
+<!-- flex-direction: column인 경우 -->
+<!-- justify-content는 수직으로 적용 -->
+<!-- align-items은 수평으로 적용 -->
+
+<!-- display: flex; 는 부모 박스에만 적용 -->
+
+<!-- 부모 컨테이너(father)를 flex 선언하면 그 안에 종속된 각각의 child-box들
+    과 element들을 일일히 명령할 필요없이 한번에 움직일 수 있음. -->
+
+<!-- justify-content 속성: 다음의 값들을 인자로 받아 요소들을 가로선 상에서 정렬함.
+flex-start: 요소들을 컨테이너의 왼쪽으로 정렬합니다.(default)
+flex-end: 요소들을 컨테이너의 오른쪽으로 정렬합니다.
+center: 요소들을 컨테이너의 가운데로 정렬합니다.
+space-between: 요소들 사이에 동일한 간격을 둡니다.
+space-around: 요소들 주위에 동일한 간격을 둡니다. -->
+
+<!-- align-items: 요소들을 세로선 상에서 정렬
+flex-start: 요소들을 컨테이너의 꼭대기로 정렬합니다.
+flex-end: 요소들을 컨테이너의 바닥으로 정렬합니다.
+center: 요소들을 컨테이너의 세로선 상의 가운데로 정렬합니다.
+baseline: 요소들을 컨테이너의 시작 위치에 정렬합니다.
+stretch: 요소들을 컨테이너에 맞도록 늘립니다. -->
+
+<!-- flex-direction 컨테이너 안에서 요소들이 정렬해야 할 방향을 지정함.
+row: 요소들을 텍스트의 방향과 동일하게 정렬합니다.
+row-reverse: 요소들을 텍스트의 반대 방향으로 정렬합니다.
+column: 요소들을 위에서 아래로 정렬합니다.
+column-reverse: 요소들을 아래에서 위로 정렬합니다. -->
