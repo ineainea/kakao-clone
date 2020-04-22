@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .box{ /* 처음 설정한 박스의 모양 선언 */
+            background-color: green;
+            width: 300px;
+            height: 50px;
+            padding: 100px;
+            display: flex;
+
+            color: white; /* 박스의 위치 */
+            justify-content: center;
+            align-items: center;
+
+            transition:all .5s ease-in-out;
+            transform: scale(0.5, 0.5);
+        }
+        .box:active{ /* 클릭시 수정되는 박스의 모양 선언 */
+            width: 150px;
+            background-color: purple;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box">
+        text
+    </span>
+</body>
+</html>
+
+<!-- 트랜지션은 작성한 property 혹은 all 전체를 변경 효과를 줌 -->

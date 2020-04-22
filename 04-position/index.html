@@ -28,13 +28,13 @@
             bottom: 10px;
             right: 0;
         } */
-        .abs-box{
+        .abs-box{ /* 부모 element */
             width: 400px;
             height: 400px;
             background-color: yellow;
             position: relative;
         }
-        .abs-child{
+        .abs-child{ /* 자식 element */
             width: 100px;
             height: 100px;
             background-color: green;
@@ -57,3 +57,9 @@
     </div> -->
 </body>
 </html>
+
+<!-- 포지션 absolute는 포지션 relative에 상대적으로 포지션을 잡는 것.
+relative 포지션이 없을 경우, absolute는 본문 body에 맞춰서 포지션을 잡음 -->
+<!-- ※자바의 상속과 비슷하다 -->
+<!-- absolute 포지션을 부모 element에 상대적으로 사용하려면 
+부모 element에게 relative 포지션을 먼저 설정해줘야함. -->
